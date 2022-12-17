@@ -1,5 +1,10 @@
 [package]
 name = "hyperoperation"
+description = "Hyperoperation (sometimes known as Knuth's notation) calculation library for Rust"
+repository = "https://github.com/FireFragment/hyperoperation-rs"
+license = "GPL-3.0-or-later"
+keywords = ["math", "knuth", "hyperoperation", "power", "arithmetic"]
+categories = ["mathematics", "science"]
 version = "0.1.0"
 edition = "2021"
 
