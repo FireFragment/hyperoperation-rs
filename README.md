@@ -17,7 +17,7 @@ This crate allows to calculate and format [hyperoperation](https://en.wikipedia.
 Simple calculation:
 
 ```rust
-# use hyperoperation::hyperoperation; 
+use hyperoperation::*; 
 assert_eq!(
     hyperoperation::<u64>(&3, 3, 2), // 3 ↑↑ 3
     7625597484987
@@ -26,11 +26,11 @@ assert_eq!(
 
 
 
-Using [BigUint](https://docs.rs/num-bigint/latest/num_bigint/struct.BigUint.html) to handle big results without overflowing:
+Using [BigUint](https://docs.rs/num-bigint/latest/num_bigint/struct.BigUint.html) to handle big results without overflowing (don't forget to add [`num_bigint`](https://lib.rs/crates/num-bigint) as your dependency) :
 
 ```rust
+use hyperoperation::*; 
 use num_bigint::BigUint;
-# use hyperoperation::hyperoperation; 
 
 let result = hyperoperation::<BigUint>(&5u8.into(), 3u8.into(), 2); // 5 ↑↑ 3
 println!("Result:\n{result}");
@@ -45,7 +45,7 @@ assert_eq!(
 Using [Hyperoperation struct ](Hyperoperation)and formatting it with [Knuth's up-arrow notation](https://en.wikipedia.org/wiki/Knuth%27s_up-arrow_notation):
 
 ```rust
-# use hyperoperation::Hyperoperation;
+use hyperoperation::*;
 let expr = Hyperoperation::<u64>::new(3, 3, 2); // Represents 3 ↑↑ 3
 let result = expr.clone().evaluate(); // Calculate the value of 3 ↑↑ 3
 
