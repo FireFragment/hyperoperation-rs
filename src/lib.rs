@@ -41,6 +41,7 @@ where
 /// This function is equivalent to `KnuthNotation::new(num_a, num_b, arrows).evaluate()`. [More about Hyperoperation struct...](Hyperoperation)
 ///
 /// ```
+/// # use hyperoperation::hyperoperation;
 /// assert_eq!(
 ///     hyperoperation::<u64>(&3, 3, 2), // 3 ↑↑ 3
 ///     7625597484987
@@ -105,6 +106,7 @@ impl<Num: NumForKnuth> Hyperoperation<Num> {
     /// # Example
     ///
     /// ```
+    /// # use hyperoperation::Hyperoperation;
     /// let expr = Hyperoperation::<u64>::new(3, 3, 2); // Represents 3 ↑↑ 3
     /// assert_eq!(expr.evaluate(), 7625597484987);
     /// ```
