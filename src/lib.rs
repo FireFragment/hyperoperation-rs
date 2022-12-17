@@ -11,7 +11,7 @@ pub fn knuth(num_a: &BigUint, num_b: &BigUint, arrows: u8) -> BigUint {
     } else {
         let mut res = num_a.clone();
         let max = num_b.clone() - 1u32;
-        for _ in num_iter::range_inclusive(BigUint::from(1u32), max.clone()) {
+        for _ in num_iter::range_inclusive(BigUint::from(1u32), max) {
             res = knuth(num_a, &res, arrows - 1);
         }
         res
