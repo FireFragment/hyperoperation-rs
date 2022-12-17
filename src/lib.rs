@@ -49,11 +49,11 @@ where
 /// ```
 pub fn hyperoperation<Num: NumForKnuth>(num_a: &Num, num_b: Num, arrows: u8) -> Num {
     // TODO: Use power
-    if arrows <= 0 {
+    if arrows == 0 {
         num_b * num_a
     } else {
         let mut res = num_a.clone();
-        let max = num_b.clone() - Num::one();
+        let max = num_b - Num::one();
         for _ in num_iter::range_inclusive(Num::one(), max) {
             res = hyperoperation(num_a, res, arrows - 1);
         }
