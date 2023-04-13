@@ -6,11 +6,10 @@ This crate allows to calculate and format [hyperoperation](https://en.wikipedia.
 
 ### Features
 
-- Calculate value of hyperoperations ([more](hyperoperation) and [more](Hyperoperation::evaluate))
-- Format hyperoperations with Knuth's up-arrow notation ([more](struct.Hyperoperation.html#method.fmt))
-- Use any unsigned numeric type for calculation fitting [some conditions](NumForKnuth), such as [BigUint](https://docs.rs/num-bigint/latest/num_bigint/struct.BigUint.html)
 
-
+- Calculate value of hyperoperations ([docs](https://docs.rs/hyperoperation/latest/hyperoperation/fn.hyperoperation.html))
+- Format hyperoperations with Knuth's up-arrow notation ([docs](https://docs.rs/hyperoperation/latest/hyperoperation/struct.Hyperoperation.html#method.fmt))
+- Use any unsigned numeric type for calculation fitting [some conditions](https://docs.rs/hyperoperation/latest/hyperoperation/trait.NumForKnuth.html), such as [BigUint](https://docs.rs/num-bigint/latest/num_bigint/struct.BigUint.html)
 
 ### Examples
 
@@ -42,7 +41,7 @@ assert_eq!(
 
 
 
-Using [Hyperoperation struct ](Hyperoperation)and formatting it with [Knuth's up-arrow notation](https://en.wikipedia.org/wiki/Knuth%27s_up-arrow_notation):
+Using [Hyperoperation struct](https://docs.rs/hyperoperation/latest/hyperoperation/struct.Hyperoperation.html)and formatting it with [Knuth's up-arrow notation](https://en.wikipedia.org/wiki/Knuth%27s_up-arrow_notation):
 
 ```rust
 use hyperoperation::*;
