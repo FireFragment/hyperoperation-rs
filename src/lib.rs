@@ -1,5 +1,4 @@
 #![doc = include_str!("../docs_home.md")]
-#![doc(html_playground_url = "https://play.rust-lang.org/")]
 
 /// Number that can be used either as the first or second number in hyperoperation.
 /// Automatically implemented for all fitting numbers.
