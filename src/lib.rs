@@ -162,7 +162,10 @@ impl<Num: core::fmt::Display + NumForKnuth> std::fmt::Display for Hyperoperation
     ///
     /// ```
     /// # use hyperoperation::Hyperoperation;
-    /// assert_eq!(format!("{}", Hyperoperation::<u32> {num_a: 3, num_b: 4, arrows: 2} ), String::from("3 ↑↑ 4"))
+    /// assert_eq!(
+    ///     format!("{}", Hyperoperation::<u32> {num_a: 3, num_b: 4, arrows: 2}),
+    ///     String::from("3 ↑↑ 4")
+    /// )
     /// ```
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let arrs = match self.arrows {
